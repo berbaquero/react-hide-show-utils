@@ -1,4 +1,4 @@
-# react-responsive-utils
+# react-hide-show-utils
 > React utility components for showing or hiding children components, based on media queries.
 
 Based and inspired on what's suggested by the `<HideAt>` and `<ShowAt>` components shown 
