@@ -4,6 +4,7 @@
   "description": "Simple and small React components for showing and hiding children based on media queries",
   "main": "dist/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "babel -d dist/ src/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "lint-staged"
