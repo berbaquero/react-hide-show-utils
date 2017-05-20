@@ -18,7 +18,7 @@ class HideAt extends React.Component {
   }
 
   updateVisibility() {
-    const shouldHide = this.mql.matches;
+    const shouldHide = !this.mql.matches;
     this.setState({
       visible: shouldHide,
     });
