@@ -18,17 +18,14 @@ Because of this:
 ## Usage:
 
 ### Install
-_For now, it's not available through npm, but can still be easily installed:_
 
-`package.json`:
-```json
-{
-  "dependencies": {
-    "react-hide-show-utils": "git+https://github.com/berbaquero/react-hide-show-utils.git#0.0.2"
-  }
-}
+```bash
+# via npm
+npm i --save react-hide-show-utils
+
+# via yarn
+yarn add react-hide-show-utils
 ```
-Note the `#0.0.x` at the end — refers to the version of the package you'll install.
 
 ### Using the components
 
