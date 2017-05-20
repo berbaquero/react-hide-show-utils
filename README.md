@@ -24,7 +24,7 @@ _For now, it's not available through npm, but can still be easily installed:_
 ```json
 {
   "dependencies": {
-    "react-responsive-utils": "git+https://github.com/berbaquero/react-responsive-utils.git#0.0.1"
+    "react-responsive-utils": "git+https://github.com/berbaquero/react-responsive-utils.git#0.0.2"
   }
 }
 ```
