@@ -24,7 +24,7 @@ _For now, it's not available through npm, but can still be easily installed:_
 ```json
 {
   "dependencies": {
-    "react-responsive-utils": "git+https://github.com/berbaquero/react-responsive-utils.git#0.0.2"
+    "react-hide-show-utils": "git+https://github.com/berbaquero/react-hide-show-utils.git#0.0.2"
   }
 }
 ```
@@ -45,7 +45,7 @@ Therefore, the component will not even be rendered initially, if the breakpoint 
 
 ```js
 import react from 'react';
-import { HideAt } from 'react-responsive-utils';
+import { HideAt } from 'react-hide-show-utils';
 
 <HideAt breakpoint="(min-width: 32em)">
  <Button
