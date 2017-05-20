@@ -100,7 +100,7 @@ var HideAt = (function(_React$Component) {
     {
       key: 'updateVisibility',
       value: function updateVisibility() {
-        var shouldHide = this.mql.matches;
+        var shouldHide = !this.mql.matches;
         this.setState({
           visible: shouldHide,
         });
