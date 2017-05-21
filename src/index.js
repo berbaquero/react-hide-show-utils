@@ -37,11 +37,6 @@ class HideShow extends React.Component {
   }
 }
 
-const commonPropTypes = {
-  breakpoint: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
-};
-
 HideShow.propTypes = {
   hide: PropTypes.bool.isRequired,
 };
@@ -52,7 +47,10 @@ const HideAt = ({ breakpoint, children }) => (
   </HideShow>
 );
 
-HideAt.propTypes = commonPropTypes;
+HideAt.propTypes = {
+  breakpoint: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
+};
 
 const ShowAt = ({ breakpoint, children }) => (
   <HideShow breakpoint={breakpoint} hide={false}>
@@ -60,6 +58,9 @@ const ShowAt = ({ breakpoint, children }) => (
   </HideShow>
 );
 
-ShowAt.propTypes = commonPropTypes;
+ShowAt.propTypes = {
+  breakpoint: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
+};
 
 export { HideAt, ShowAt };
