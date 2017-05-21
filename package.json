@@ -4,8 +4,9 @@
   "description": "Simple and small React components for showing and hiding children based on media queries",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "npm run build",
+    "prebuild": "rm -rf dist/ && mkdir dist/",
     "build": "babel -d dist/ src/",
+    "prepublish": "npm run build",
     "precommit": "lint-staged"
   },
   "lint-staged": {
