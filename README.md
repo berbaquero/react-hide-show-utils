@@ -11,7 +11,7 @@ Even though hiding or showing components can easily be done with just CSS as wel
 they would still be part of the DOM, which can complicate things in some not-so-rare situations.
 
 With these utility components, the children element **will actually be added/removed from the DOM**.
-This avoids possible redundant elements at the same tie, and results in a leaner DOM.
+This avoids possible redundant elements at the same time, and results in a leaner DOM.
 
 ## How do they work?
 
