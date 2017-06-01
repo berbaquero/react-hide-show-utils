@@ -5,6 +5,8 @@ Based and inspired on what's suggested by the `<HideAt>` and `<ShowAt>` componen
 in [this block of code](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2#d5f9) 
 from [this AirBnb Engineering's blog post](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2).
 
+Also, tiny: **976 bytes, gzipped.** 
+
 ## How are these useful?
 
 Even though hiding or showing components can easily be done with just CSS as well,
