@@ -1,11 +1,11 @@
 # react-hide-show-utils
 > React utility components for showing or hiding children components, based on media queries.
 
+![976 bytes gzipped](https://img.shields.io/badge/gzipped-976_bytes-brightgreen.svg)
+
 Based and inspired on what's suggested by the `<HideAt>` and `<ShowAt>` components shown 
 in [this block of code](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2#d5f9) 
 from [this AirBnb Engineering's blog post](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2).
-
-Also, tiny: **976 bytes, gzipped.** 
 
 ## How are these useful?
 
