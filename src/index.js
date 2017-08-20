@@ -13,8 +13,9 @@ class HideShow extends React.Component {
     this.state = {
       visible: false,
     };
+    this.updateVisibility = this.updateVisibility.bind(this);
     this.mql = window.matchMedia(props.breakpoint);
-    this.mql.addListener(this.updateVisibility.bind(this));
+    this.mql.addListener(this.updateVisibility);
   }
 
   updateVisibility() {
@@ -30,6 +31,10 @@ class HideShow extends React.Component {
   // so it does not render `children` if the breakpoint is already active
   componentWillMount() {
     this.updateVisibility();
+  }
+
+  componentWillUnmount() {
+    this.mql.removeListener(this.updateVisibility);
   }
 
   render() {
