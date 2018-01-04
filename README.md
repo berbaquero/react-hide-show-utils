@@ -78,25 +78,3 @@ import { ShowAt } from 'react-hide-show-utils';
 the breakpoint is checked, to determine whether it's active or not.
 Therefore, the children will not even be rendered initially,
 if it's not meant to based on the utility used and breakpoint declared.
-
-* For now, if you want pass more than one element as children, you must wrap them all
-in an appropriate wrapper element - like a `<div>`.
-  
-  Example:
-  ```jsx
-  // this is not possible - will warn and break
-  <HideAt breakpoint="(min-width: 20em)">
-   <MyComponent myProp={prop}/>
-   <button onClick={handler}>I will break the app</button>
-  </HideAt>
-
-  // how to handle it - notice the <div> wrapping the children
-  <HideAt breakpoint="(min-width: 20em)">
-   <div>
-    <MyComponent myProp={prop}/>
-    <button onClick={handler}>All is fine now</button>
-   </div>
-  </HideAt>
-  ```
-
-  These utility components were designed this way to keep them simple and small, and with only one single responsibility.
