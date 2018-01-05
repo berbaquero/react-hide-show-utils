@@ -14,11 +14,15 @@ class HideShow extends React.Component {
       visible: false,
     };
     this.updateVisibility = this.updateVisibility.bind(this);
-    this.mql = window.matchMedia(props.breakpoint);
-    this.mql.addListener(this.updateVisibility);
+    // Only initialize matchMedia on the client
+    if (typeof window !== 'undefined') {
+      this.mql = window.matchMedia(props.breakpoint);
+      this.mql.addListener(this.updateVisibility);
+    }
   }
 
   updateVisibility() {
+    if (typeof window === 'undefined') return; // Only on the client
     const breakpointActive = this.mql.matches;
     if (this.props.hide) {
       this.setState({ visible: !breakpointActive });
