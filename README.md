@@ -23,7 +23,7 @@ and hide or show their children accordingly.
 
 Because of this:
 
-* These components only work on the browser. Which means, for now, **they do not support server-side rendering**.
+* These components only work on the browser. On the server, *nothing declared inside these components is rendered*.
 * Since it uses `matchMedia`, you might need a polyfill for [support in legacy browsers (like IE9)](http://caniuse.com/#feat=matchmedia).
   * I suggest to consider using the [polyfill.io service](https://polyfill.io/).
   
