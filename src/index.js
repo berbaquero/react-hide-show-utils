@@ -58,7 +58,7 @@ const HideAt = ({ breakpoint, children }) => (
 
 HideAt.propTypes = {
   breakpoint: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 const ShowAt = ({ breakpoint, children }) => (
@@ -69,7 +69,7 @@ const ShowAt = ({ breakpoint, children }) => (
 
 ShowAt.propTypes = {
   breakpoint: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export { HideAt, ShowAt };
