@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 /**
  * Descriptively hide or show children components, based on a breakpoint
  * Uses matchMedia
- * Client-side only
  */
 
 class HideShow extends React.Component {
@@ -58,7 +57,7 @@ const HideAt = ({ breakpoint, children }) => (
 
 HideAt.propTypes = {
   breakpoint: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 const ShowAt = ({ breakpoint, children }) => (
@@ -69,7 +68,7 @@ const ShowAt = ({ breakpoint, children }) => (
 
 ShowAt.propTypes = {
   breakpoint: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export { HideAt, ShowAt };
