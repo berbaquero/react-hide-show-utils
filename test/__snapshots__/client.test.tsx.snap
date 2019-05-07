@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HideAt> should render its children 1`] = `
+<div>
+  <h1>
+    Anything here
+  </h1>
+</div>
+`;
+
+exports[`<ShowAt> should not render its children 1`] = `<div />`;
