@@ -1,84 +1,144 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta name="description"
-      content="Hide/show children elements based on media queries">
-  <meta name="author"
-      content="Bernardo Baquero Stand">
-  <link rel="icon" type="image/png" href="icon.png">
-  <title>react-hide-show-utils - Simple, small React utility components for showing/hiding (adding/removing) children based on media queries</title>
-  <style type="text/css">
-  * { box-sizing: border-box }
-  body {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 1em;
-    background-image: repeating-radial-gradient(#ddd, #ccc 1px, transparent 1px, transparent 100%);
-    background-size: 8px 8px;
-  }
-  @media (min-width: 36em) {
-    body {
-      display: flex;
-    }
-    .container {
-      max-width: 36em;
-    }
-  }
-  .mono { font-family: SFMono-Regular,Menlo,monospace }
-  .sans-serif { font-family: -apple-system,BlinkMacSystemFont,-apple-system-font,'Helvetica Neue',Helvetica,Arial,sans-serif }
-  .white { color: white }
-  .black { color: black }
-  .block { display: block }
-  .inline-block { display: inline-block }
-  .text-big { font-size: 2.8em }
-  .text-medium { font-size: 1.2em }
-  .title { letter-spacing: 1.5px }
-  .bold { font-weight: bold }
-  .no-bottom-margin { margin-bottom: 0 }
-  .no-top-margin { margin-top: 0 }
-  .bottom-margin-1 { margin-bottom: 1em }
-  .bottom-margin-2 { margin-bottom: 2em }
-  .right-margin-1 { margin-right: 1em }
-  .link-bg { background-color: rgba(0, 0, 0, .4) }
-  .code-bg { background-color: rgba(255, 46, 138, .5) }
-  .wrap {
-    padding: 1.2em;
-    border-radius: 7px;
-  }
-  </style>
-</head>
-<body class="black sans-serif">
-<main class="container">
-  <div class="bold">/ / / / / / / / / / / / / /</div>
-  <h1 class="title text-big no-top-margin no-bottom-margin">
-    react-hide-show-utils
-  </h1>
-  <p class="text-medium no-top-margin bottom-margin-2">Hide/show children elements based on media queries.</p>
-  <div class="wrap white code-bg bottom-margin-2">
-    <code class="block mono text-medium bottom-margin-1">
-      &lt;HideAt breakpoint="(min-width: 36em)"&gt;
-    </code>
-    <code class="block mono text-medium">
-      &lt;ShowAt breakpoint="(max-width: 20em)"&gt;
-    </code>
-  </div>
-  <div class="wrap white code-bg bottom-margin-2">
-    <code class="mono text-medium">
-      npm i -S react-hide-show-utils
-    </code>
-  </div>
-  <div class="">
-    <span class="wrap inline-block white link-bg right-margin-1 bottom-margin-1">
-      By <a class="white bold" href="http://berbaquero.com">@berbaquero</a>
-    </span>
-    <a class="wrap inline-block link-bg white bold right-margin-1 bottom-margin-1" href="https://www.npmjs.com/package/react-hide-show-utils">npm</a>
-    <a class="wrap inline-block link-bg white bold right-margin-1 bottom-margin-1" href="https://github.com/berbaquero/react-hide-show-utils">GitHub</a>
-  </div>
-</main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Hide/show children elements based on media queries"
+    />
+    <meta name="author" content="Bernardo Baquero Stand" />
+    <link rel="icon" type="image/png" href="icon.png" />
+    <title>
+      react-hide-show-utils - Simple, small React utility components for
+      showing/hiding (adding/removing) children based on media queries
+    </title>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 1em;
+        background-image: repeating-radial-gradient(
+          #ddd,
+          #ccc 1px,
+          transparent 1px,
+          transparent 100%
+        );
+        background-size: 8px 8px;
+      }
+      @media (min-width: 36em) {
+        body {
+          display: flex;
+        }
+        .container {
+          max-width: 36em;
+        }
+      }
+      .mono {
+        font-family: SFMono-Regular, Menlo, monospace;
+      }
+      .sans-serif {
+        font-family: -apple-system, BlinkMacSystemFont, -apple-system-font,
+          'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .white {
+        color: white;
+      }
+      .black {
+        color: black;
+      }
+      .block {
+        display: block;
+      }
+      .inline-block {
+        display: inline-block;
+      }
+      .text-big {
+        font-size: 2.8em;
+      }
+      .text-medium {
+        font-size: 1.2em;
+      }
+      .title {
+        letter-spacing: 1.5px;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .no-bottom-margin {
+        margin-bottom: 0;
+      }
+      .no-top-margin {
+        margin-top: 0;
+      }
+      .bottom-margin-1 {
+        margin-bottom: 1em;
+      }
+      .bottom-margin-2 {
+        margin-bottom: 2em;
+      }
+      .right-margin-1 {
+        margin-right: 1em;
+      }
+      .link-bg {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .code-bg {
+        background-color: rgba(255, 46, 138, 0.5);
+      }
+      .wrap {
+        padding: 1.2em;
+        border-radius: 7px;
+      }
+    </style>
+  </head>
+  <body class="black sans-serif">
+    <main class="container">
+      <div class="bold">/ / / / / / / / / / / / / /</div>
+      <h1 class="title text-big no-top-margin no-bottom-margin">
+        react-hide-show-utils
+      </h1>
+      <p class="text-medium no-top-margin bottom-margin-2">
+        Hide/show children elements based on media queries.
+      </p>
+      <div class="wrap white code-bg bottom-margin-2">
+        <code class="block mono text-medium bottom-margin-1">
+          &lt;HideAt breakpoint="(min-width: 36em)"&gt;
+        </code>
+        <code class="block mono text-medium">
+          &lt;ShowAt breakpoint="(max-width: 20em)"&gt;
+        </code>
+      </div>
+      <div class="wrap white code-bg bottom-margin-2">
+        <code class="mono text-medium">
+          npm i -S react-hide-show-utils
+        </code>
+      </div>
+      <div class="">
+        <span
+          class="wrap inline-block white link-bg right-margin-1 bottom-margin-1"
+        >
+          By <a class="white bold" href="http://berbaquero.com">@berbaquero</a>
+        </span>
+        <a
+          class="wrap inline-block link-bg white bold right-margin-1 bottom-margin-1"
+          href="https://www.npmjs.com/package/react-hide-show-utils"
+          >npm</a
+        >
+        <a
+          class="wrap inline-block link-bg white bold right-margin-1 bottom-margin-1"
+          href="https://github.com/berbaquero/react-hide-show-utils"
+          >GitHub</a
+        >
+      </div>
+    </main>
+  </body>
 </html>

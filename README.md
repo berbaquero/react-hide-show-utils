@@ -1,10 +1,11 @@
 # react-hide-show-utils
+
 > React utility components for showing or hiding children components, based on media queries.
 
 ![976 bytes gzipped](https://img.shields.io/badge/gzipped-976_bytes-brightgreen.svg)
 
-Based and inspired on what's suggested by the `<HideAt>` and `<ShowAt>` components shown 
-in [this block of code](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2#d5f9) 
+Based and inspired on what's suggested by the `<HideAt>` and `<ShowAt>` components shown
+in [this block of code](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2#d5f9)
 from [this AirBnb Engineering's blog post](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2).
 
 ## How are these useful?
@@ -17,16 +18,17 @@ This avoids possible redundant elements at the same time, and results in a leane
 
 ## How do they work?
 
-These components use the browser's [`window.matchMedia API`](https://developer.mozilla.org/en-US/docs/Web/API/window/matchMedia) internally to be 
+These components use the browser's [`window.matchMedia API`](https://developer.mozilla.org/en-US/docs/Web/API/window/matchMedia) internally to be
 [notified when a media query is active](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries#Receiving_query_notifications)
 and hide or show their children accordingly.
 
 Because of this:
 
-* These components only work on the browser. On the server, *nothing declared inside these components is rendered*.
-* Since it uses `matchMedia`, you might need a polyfill for [support in legacy browsers (like IE9)](http://caniuse.com/#feat=matchmedia).
-  * I suggest to consider using the [polyfill.io service](https://polyfill.io/).
-  
+- These components only work on the browser. On the server, _nothing declared inside these components is rendered_.
+- Since it uses `matchMedia`, you might need a polyfill for [support in legacy browsers (like IE9)](http://caniuse.com/#feat=matchmedia).
+
+  - I suggest to consider using the [polyfill.io service](https://polyfill.io/).
+
 Using `matchMedia` saves us from having to listen to and manage the window's `resize` event,
 and all the complications that come with it.
 
@@ -53,10 +55,8 @@ And logically, it mounts it again when the breakpoint becomes inactive again.
 import { HideAt } from 'react-hide-show-utils';
 
 <HideAt breakpoint="(min-width: 32em)">
- <Button
-   text="I'm not rendered on wide viewports!"
- /> 
-</HideAt>
+  <Button text="I'm not rendered on wide viewports!" />
+</HideAt>;
 ```
 
 ### `<ShowAt>`
@@ -68,13 +68,13 @@ And logically, it un-mounts it when the breakpoint becomes inactive again.
 import { ShowAt } from 'react-hide-show-utils';
 
 <ShowAt breakpoint="(max-width: 8em)">
- <h1>I'm only shown on narrow viewports!</h1>
-</ShowAt>
+  <h1>I'm only shown on narrow viewports!</h1>
+</ShowAt>;
 ```
 
 ### Notes
 
-* Before the children component is even mounted for the first time,
-the breakpoint is checked, to determine whether it's active or not.
-Therefore, the children will not even be rendered initially,
-if it's not meant to based on the utility used and breakpoint declared.
+- Before the children component is even mounted for the first time,
+  the breakpoint is checked, to determine whether it's active or not.
+  Therefore, the children will not even be rendered initially,
+  if it's not meant to based on the utility used and breakpoint declared.
