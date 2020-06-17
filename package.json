@@ -13,7 +13,8 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "prebuild": "yarn test"
+    "preversion": "yarn test",
+    "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
     "react": ">=16"
