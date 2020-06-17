@@ -10,8 +10,8 @@ interface HideShowState {
 }
 
 /**
- * Descriptively hide or show children components, based on a breakpoint
- * Uses matchMedia
+ * Descriptively hide or show children components, based on a breakpoint.
+ * Uses matchMedia.
  */
 class HideShow extends React.Component<HideShowProps, HideShowState> {
   private mql?: MediaQueryList;
