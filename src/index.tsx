@@ -19,15 +19,16 @@ class HideShow extends React.Component<HideShowProps, HideShowState> {
   constructor(props: HideShowProps) {
     super(props);
     this.isClient = typeof window !== 'undefined';
+    this.updateVisibility = this.updateVisibility.bind(this);
     if (this.isClient) {
       // Only initialize matchMedia on the client
       this.mql = window.matchMedia(props.breakpoint);
       this.mql.addListener(this.updateVisibility);
     }
+    // Set initial visibility for first render
     this.state = {
       visible: this.isClient ? isVisible(props.hide, this.mql!.matches) : false,
     };
-    this.updateVisibility = this.updateVisibility.bind(this);
   }
 
   updateVisibility() {
