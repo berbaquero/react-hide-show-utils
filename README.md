@@ -2,7 +2,7 @@
 
 > React utility components for showing or hiding children components, based on media queries.
 
-![976 bytes gzipped](https://img.shields.io/badge/gzipped-976_bytes-brightgreen.svg)
+[![](https://badgen.net/bundlephobia/min/react-hide-show-utils)](https://bundlephobia.com/result?p=react-hide-show-utils) [![](https://badgen.net/bundlephobia/minzip/react-hide-show-utils)](https://bundlephobia.com/result?p=react-hide-show-utils)
 
 Based and inspired on what's suggested by the `<HideAt>` and `<ShowAt>` components shown
 in [this block of code](https://medium.com/airbnb-engineering/rearchitecting-airbnbs-frontend-5e213efc24d2#d5f9)
