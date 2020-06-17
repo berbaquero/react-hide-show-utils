@@ -15,33 +15,24 @@ interface HideShowState {
  */
 class HideShow extends React.Component<HideShowProps, HideShowState> {
   private mql?: MediaQueryList;
+  private isClient: boolean;
   constructor(props: HideShowProps) {
     super(props);
-    this.state = {
-      visible: false,
-    };
-    this.updateVisibility = this.updateVisibility.bind(this);
-    // Only initialize matchMedia on the client
-    if (typeof window !== 'undefined') {
+    this.isClient = typeof window !== 'undefined';
+    if (this.isClient) {
+      // Only initialize matchMedia on the client
       this.mql = window.matchMedia(props.breakpoint);
       this.mql.addListener(this.updateVisibility);
     }
+    this.state = {
+      visible: this.isClient ? isVisible(props.hide, this.mql!.matches) : false,
+    };
+    this.updateVisibility = this.updateVisibility.bind(this);
   }
 
   updateVisibility() {
-    if (typeof window === 'undefined') return; // Only on the client
-    const breakpointActive = this.mql ? this.mql.matches : false;
-    if (this.props.hide) {
-      this.setState({ visible: !breakpointActive });
-    } else {
-      this.setState({ visible: breakpointActive });
-    }
-  }
-
-  // Check visibility before mounting (ergo `render()`-ing)
-  // so it does not render `children` if the breakpoint is already active
-  componentWillMount() {
-    this.updateVisibility();
+    if (!this.isClient) return; // Only on the client
+    this.setState({ visible: isVisible(this.props.hide, this.mql!.matches) });
   }
 
   componentWillUnmount() {
@@ -76,3 +67,7 @@ const ShowAt: React.FC<HideShowAtProps> = function({ breakpoint, children }) {
 };
 
 export { HideAt, ShowAt };
+
+function isVisible(isHide: boolean, mqIsActive: boolean): boolean {
+  return isHide ? !mqIsActive : mqIsActive;
+}
