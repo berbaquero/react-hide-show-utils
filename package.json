@@ -1,7 +1,7 @@
 {
   "name": "react-hide-show-utils",
   "author": "Bernardo Baquero Stand <baquerober@gmail.com> (https://berbaquero.com)",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Simple and small React components for showing and hiding children based on media queries",
   "license": "MIT",
   "main": "dist/index.js",
