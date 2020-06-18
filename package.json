@@ -50,8 +50,9 @@
   },
   "keywords": [
     "react",
-    "stateful",
-    "responsive"
+    "responsive",
+    "media-query",
+    "declarative"
   ],
   "author": "Bernardo Baquero Stand <baquerober@gmail.com> (http://berbaquero.com)",
   "contributors": [
