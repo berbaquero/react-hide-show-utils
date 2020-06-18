@@ -1,28 +1,33 @@
 {
   "name": "react-hide-show-utils",
+  "author": "Bernardo Baquero Stand <baquerober@gmail.com> (https://berbaquero.com)",
   "version": "1.1.0",
   "description": "Simple and small React components for showing and hiding children based on media queries",
+  "license": "MIT",
   "main": "dist/index.js",
-  "umd:main": "dist/react-hide-show-utils-ts.umd.production.js",
-  "module": "dist/react-hide-show-utils-ts.es.production.js",
+  "module": "dist/react-hide-show-utils.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test",
     "preversion": "yarn test",
-    "prepublishOnly": "yarn build"
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build"
   },
   "peerDependencies": {
     "react": ">=16"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn test"
+      "pre-push": "yarn test",
+      "pre-commit": "tsdx lint"
     }
   },
   "prettier": {
@@ -32,17 +37,14 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.12",
-    "@types/react": "^16.8.16",
-    "@types/react-dom": "^16.8.4",
-    "husky": "^2.2.0",
-    "prettier": "^1.17.0",
-    "pretty-quick": "^1.10.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "tsdx": "^0.5.7",
-    "tslib": "^1.9.3",
-    "typescript": "^3.4.5"
+    "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
+    "husky": "^4.2.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tsdx": "^0.13.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.5"
   },
   "repository": {
     "type": "git",
@@ -54,11 +56,9 @@
     "media-query",
     "declarative"
   ],
-  "author": "Bernardo Baquero Stand <baquerober@gmail.com> (http://berbaquero.com)",
   "contributors": [
     "Sinan Bolel <sinanbolel@gmail.com> (https://github.com/sbolel)"
   ],
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/berbaquero/react-hide-show-utils/issues"
   },
