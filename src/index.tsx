@@ -3,6 +3,7 @@ import * as React from 'react';
 interface HideShowProps {
   breakpoint: string;
   hide: boolean;
+  children?: React.ReactNode;
 }
 
 interface HideShowState {
