@@ -3,7 +3,6 @@ import * as React from 'react';
 interface HideShowProps {
   breakpoint: string;
   hide: boolean;
-  children?: React.ReactNode;
 }
 
 interface HideShowState {
@@ -50,6 +49,7 @@ class HideShow extends React.Component<HideShowProps, HideShowState> {
 
 export interface HideShowAtProps {
   breakpoint: HideShowProps['breakpoint'];
+  children?: React.ReactNode;
 }
 
 const HideAt: React.FC<HideShowAtProps> = function({ breakpoint, children }) {
