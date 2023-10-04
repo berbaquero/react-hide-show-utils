@@ -49,6 +49,7 @@ class HideShow extends React.Component<HideShowProps, HideShowState> {
 
 export interface HideShowAtProps {
   breakpoint: HideShowProps['breakpoint'];
+  children?: React.ReactNode;
 }
 
 const HideAt: React.FC<HideShowAtProps> = function({ breakpoint, children }) {
