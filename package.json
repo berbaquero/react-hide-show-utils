@@ -62,5 +62,6 @@
   "bugs": {
     "url": "https://github.com/berbaquero/react-hide-show-utils/issues"
   },
-  "homepage": "https://react-hide-show-utils.berbaquero.com/"
+  "homepage": "https://react-hide-show-utils.berbaquero.com/",
+  "dependencies": {}
 }
